@@ -43,7 +43,7 @@ while :; do
     priceChange=$(awk -v t1="$lastprice1" -v t2="$lastprice2" 'BEGIN{print (t2-t1)/t1 * 100}')
 
 	if (( $(echo "$volumeChange > 5" | bc -l) )); then
-      echo -e "$coinPair\nPrice change: $priceChange%\nVolume change: $volumeChange%\n\n" >> msg
+     	 echo -e "$coinPair\nPrice change: $priceChange%\nVolume change: $volumeChange%\n\n"
 	fi
   done
 done &
